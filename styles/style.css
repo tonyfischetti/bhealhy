@@ -1,0 +1,364 @@
+
+.carousel-container-2 {
+    width: 300px;
+    height: 300px;
+    background: black;
+}
+
+#logo-and-tagline {
+    width: 95%;
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--BlueGreen);
+    border-radius: 10px;
+    color: white;
+    flex-grow: 1;
+    max-width: 66%;
+    justify-content: space-evenly;
+}
+
+.info-card-header {
+    font-size: 1.5em;
+    text-align: right;
+    padding-inline: 1em;
+}
+
+.info-card-content {
+    font-family: var(--SansFontFamily);
+    font-size: 0.9em;
+    padding-inline: 2em;
+    max-width: 70ch;
+    flex-grow: 1;
+}
+
+li {
+    font-family: var(--SansFontFamily);
+    font-size: 0.9em;
+}
+
+.info-card-footer {
+    font-size: 1.3em;
+    text-align: left;
+    padding-inline: 1em;
+    padding-bottom: 1em;
+}
+
+
+#intro-text-and-carousel {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+/* when smaller screens... */
+@media only screen and (max-width: 600px) {
+    #intro-text-and-carousel {
+        flex-direction: column;
+    }
+    .split {
+        width: 100%;
+    }
+    .info-card {
+        max-width: 100%
+    }
+    .info-card-content {
+        padding: 2em;
+    }
+}
+
+
+#intro-text-and-carousel {
+    display: flex;
+    flex-direction: column;
+}
+
+/* when larger screens... */
+@media only screen and (min-width: 600px) {
+    #intro-text-and-carousel {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+
+/* ------------------------------------------- */
+
+:root {
+    --AbsoluteMaxWidth: 800px;
+    --VeryBackgroundColor: #F3F3F3;
+    --BackgroundColor: white;
+    --Gold: #F3C967;
+    --BlueGreen: #4F8096;
+    --CarouselWidth: 300px;
+    --BrandFontFamily: Spectral, serif;
+    --SansFontFamily: Roboto, Helvetica, sans-serif;
+    --FontF
+
+    --BreakAwayPoint: 600px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin:  0px;
+    padding: 0px;
+}
+
+/* ------------------------------------------- */
+
+body {
+    margin: auto;
+    background-color: var(--VeryBackgroundColor);
+}
+
+* {
+    font-family: var(--BrandFontFamily);
+}
+
+
+#main-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px 0px;
+    width: 100%;
+    gap: 1em;
+    background-color: var(--Gold);
+}
+
+/* when smaller screens... */
+@media only screen and (max-width: 600px) {
+  #main-navbar {
+      flex-direction: column;
+      align-items: center;
+  }
+  a.nav-link {
+    text-decoration: underline;
+  }
+}
+
+a.nav-link {
+    font-style: normal;
+    text-decoration: none;
+    padding: 0px 20px;
+    text-align: center;
+    color: var(--BlueGreen);
+    font-weight: 700;
+}
+
+a.nav-link:hover {
+    background-color: var(--BlueGreen);
+    color: var(--Gold);
+}
+
+#between-header-and-footer {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+#middle-body-container {
+    display: flex;
+    flex-direction: column;
+    /* background-color: var(--BackgroundColor); */
+    padding: 30px;
+    /* max-width: var(--AbsoluteMaxWidth); */
+    margin: auto;
+}
+
+#prelude {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: var(--Gold);
+    border-radius: 11px;
+    border-style: none solid;
+    padding: 10px;
+    /* background: var(--BackgroundColor); */
+}
+
+img.big-image {
+    width: calc(var(--AbsoluteMaxWidth) * 0.4);
+    max-width: 95%;
+}
+
+p#tagline {
+    margin-top: 35px;
+    font-style: italic;
+    font-size: 1.5em;
+}
+
+
+
+section + section {
+    padding-top: 50px;
+}
+
+
+
+
+
+
+/* utility classes */
+
+.blue-green-color {
+    color: var(--BlueGreen);
+    font-weight: bold;
+}
+
+.text-color-background {
+    color: var(--BackgroundColor);
+}
+
+.blue-green-background {
+    background: var(--BlueGreen);
+}
+
+
+div.carousel-container {
+    position: relative;
+    width: var(--CarouselWidth);
+    padding: 5px;
+    background-color: #222;
+}
+
+
+
+
+footer {
+    opacity: 50%;
+    font-style: italic;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    /* max-width: 220px; */
+    margin: auto;
+}
+
+figcaption {
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+
+#copyright {
+}
+
+hr {
+    height: 1px;
+}
+
+.carousel-slide>img {
+    width: var(--CarouselWidth);
+}
+
+
+
+
+/* Hide the images by default */
+.carousel-slide {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+}
+
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #222222b8;
+    color: white;
+    position: absolute;
+    width: 98%;
+    top: 275px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* img { */
+/*     max-width: 50%; */
+/* } */
+
+p#caption {
+    padding: 0px;
+    margin: 0px;
+}
