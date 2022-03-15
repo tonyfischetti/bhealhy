@@ -1,22 +1,30 @@
 
-.carousel-container-2 {
+
+.img-split {
+    flex-basis: 33%;
     width: 300px;
     height: 300px;
-    background: black;
+}
+
+.food-picture {
+    width: 300px;
+    height: 300px;
 }
 
 #logo-and-tagline {
     width: 95%;
 }
 
-.info-card {
+.split {
+    flex-grow: 1;
+}
+
+.info-card-split {
     display: flex;
     flex-direction: column;
-    background: var(--BlueGreen);
     border-radius: 10px;
-    color: white;
     flex-grow: 1;
-    max-width: 66%;
+    flex-basis: 66%;
     justify-content: space-evenly;
 }
 
@@ -47,39 +55,22 @@ li {
 }
 
 
-#intro-text-and-carousel {
+#info-card-img-split {
     display: flex;
     flex-direction: row;
     gap: 1em;
+    margin-block: 2rem;
 }
 
 /* when smaller screens... */
 @media only screen and (max-width: 600px) {
-    #intro-text-and-carousel {
+    #info-card-img-split {
         flex-direction: column;
-    }
-    .split {
-        width: 100%;
-    }
-    .info-card {
-        max-width: 100%
+        justify-content: center;
+        align-items: center;
     }
     .info-card-content {
         padding: 2em;
-    }
-}
-
-
-#intro-text-and-carousel {
-    display: flex;
-    flex-direction: column;
-}
-
-/* when larger screens... */
-@media only screen and (min-width: 600px) {
-    #intro-text-and-carousel {
-        display: flex;
-        flex-direction: row;
     }
 }
 
@@ -183,7 +174,7 @@ a.nav-link:hover {
     border-radius: 11px;
     border-style: none solid;
     padding: 10px;
-    /* background: var(--BackgroundColor); */
+    margin-bottom: 2rem;
 }
 
 img.big-image {
@@ -199,10 +190,6 @@ p#tagline {
 
 
 
-section + section {
-    padding-top: 50px;
-}
-
 
 
 
@@ -210,7 +197,7 @@ section + section {
 
 /* utility classes */
 
-.blue-green-color {
+.blue-green-text {
     color: var(--BlueGreen);
     font-weight: bold;
 }
@@ -221,6 +208,18 @@ section + section {
 
 .blue-green-background {
     background: var(--BlueGreen);
+}
+
+.gold-background {
+    background: var(--Gold);
+}
+
+.black-text {
+    color: black;
+}
+
+.white-text {
+    color: white;
 }
 
 
