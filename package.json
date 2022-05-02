@@ -1,0 +1,16 @@
+{
+  "name": "bhealthy",
+  "version": "1.0.0",
+  "description": "Vasilik's website",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tony Fischetti",
+  "license": "ISC",
+  "devDependencies": {
+    "chalk": "^5.0.1",
+    "dotenv": "^16.0.0",
+    "gulp": "^4.0.2"
+  }
+}
