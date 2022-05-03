@@ -4,10 +4,13 @@
   Our Mission
 {% endblock %}
 
+{% block afternavbar %}
+  {% include "partials/logo-and-tagline-thin.html" %}
+{% endblock %}
+
 {% block middlebodycontainer %}
 <div id="middle-body-container">
 
-  {% include "partials/logo-and-tagline.html" %}
 
   <div class="narrower">
 
@@ -62,8 +65,8 @@
           </div>
           <p>What we take from the Earth has to balance what we return in exchange.
           Our compostable packaging honors creation rather than contributing to the
-          enormous <a href="https://www.theworldcounts.com/challenges/planet-earth/state-of-the-planet/world-waste-facts/story"
-                      target="_blank">global waste.</a></p>
+          enormous
+          <a class="body-link dark-link" href="https://www.theworldcounts.com/challenges/planet-earth/state-of-the-planet/world-waste-facts/story" target="_blank">global waste</a></p>
         </div>
       </div>
     </div>
@@ -76,9 +79,11 @@
       <div class="info-card-split blue-green-background white-text">
         <div class="info-card-content"> <!-- more-padding">-->
           <br/>
-          World Centric provides zero waste solutions to reduce environmental impact.
-          Their containers are made from NatureWorks IngeoTM PLA compostable plastic,
-          derived from plants grown in the U.S.
+          <a class="body-link light-link" href="https://www.worldcentric.com/" target="_blank">World Centric</a>
+          provides zero waste solutions to reduce environmental impact.
+          Their containers are made from
+          <a class="body-link light-link" href="https://www.natureworksllc.com/" target="_blank">NatureWorks Ingeo&#8482; PLA</a>
+          compostable plastic, derived from plants grown in the U.S.
           <ul>
             <li>Suitable for food up to 120° F</li>
             <li>Freezer safe</li>
@@ -91,7 +96,7 @@
     </div>
 
     <div class="info-card-split gold-background blue-green-text more-top-margin">
-      <div class="info-card-content more-bigger-font a-little-wider">
+      <div class="info-card-content more-bigger-font a-little-wider more-padding">
         <p>Our values are reflected in the way we choose to live ~ TODAY.</p>
       </div>
     </div>

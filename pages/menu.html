@@ -4,8 +4,16 @@
   Menu
 {% endblock %}
 
-{% block betweenheaderandfooter %}
-<div id="between-header-and-footer">
-  This is my menu
-</div>
+{% block afternavbar %}
+  {% include "partials/logo-and-tagline-thin.html" %}
 {% endblock %}
+
+
+{% block middlebodycontainer %}
+
+<div id="middle-body-container">
+  This is the menu
+</div>
+
+{% endblock %}
+
