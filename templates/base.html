@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+      {% block title %}
+      {% endblock %}
+    </title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap" rel="stylesheet">
+
+    <script src="js/main.js"></script>
+
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+  </head>
+
+  <body>
+
+    {% include "partials/navbar.html" %}
+
+    {% block betweenheaderandfooter %}
+    {% endblock %}
+
+    {% include "partials/footer.html" %}
+
+  </body>
+</html>
+
+
+          <!-- <div class="carousel-container" class="split"> -->
+          <!--   <div class="carousel-slide"> -->
+          <!--     <div class="numbertext">1 / 4</div> -->
+          <!--     <img src="static/photos-of-food/paximathia.jpg"> -->
+          <!--   </div> -->
+          <!--   <div class="carousel-slide"> -->
+          <!--     <div class="numbertext">2 / 4</div> -->
+          <!--       <img src="static/photos-of-food/oatmeal-cookies.jpg"> -->
+          <!--   </div> -->
+          <!--   <div class="carousel-slide"> -->
+          <!--     <div class="numbertext">3 / 4</div> -->
+          <!--     <img src="static/photos-of-food/sweet-wine-twists.jpg"> -->
+          <!--   </div> -->
+          <!--   <div class="carousel-slide"> -->
+          <!--     <div class="numbertext">4 / 4</div> -->
+          <!--     <img src="static/photos-of-food/honey-dipped-cookies.jpg"> -->
+          <!--   </div> -->
+          <!--   <a class="prev" onclick="plusSlides(-1)">&#38;#10094;</a> -->
+          <!--   <a class="next" onclick="plusSlides(1)">&#38;#10095;</a> -->
+          <!--   <div class="caption-container"> -->
+          <!--     <p id="caption"></p> -->
+          <!--   </div> -->
+          <!--   <div class="row"> -->
+          <!--     <div class="column"> -->
+          <!--       <img class="demo cursor" -->
+          <!--            src="static/photos-of-food/paximathia.jpg" -->
+          <!--            style="width:100%" onclick="currentSlide(1)" -->
+          <!--            alt="Paximathia"> -->
+          <!--     </div> -->
+          <!--     <div class="column"> -->
+          <!--       <img class="demo cursor" -->
+          <!--            src="static/photos-of-food/oatmeal-cookies.jpg" -->
+          <!--            style="width:100%" onclick="currentSlide(2)" -->
+          <!--            alt="Oatmeal Cookies"> -->
+          <!--     </div> -->
+          <!--     <div class="column"> -->
+          <!--       <img class="demo cursor" -->
+          <!--            src="static/photos-of-food/sweet-wine-twists.jpg" -->
+          <!--            style="width:100%" onclick="currentSlide(3)" -->
+          <!--            alt="Sweet Wine Twists"> -->
+          <!--     </div> -->
+          <!--     <div class="column"> -->
+          <!--       <img class="demo cursor" -->
+          <!--            src="static/photos-of-food/honey-dipped-cookies.jpg" -->
+          <!--            style="width:100%" onclick="currentSlide(4)" -->
+          <!--            alt="Honey Dipped Cookies"> -->
+          <!--     </div> -->
+          <!--   </div> -->
+          <!-- </div> &#60;&#33;&#45;&#45; carousel container &#45;&#45;&#62; -->

@@ -7,17 +7,20 @@ const babel = require('gulp-babel');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 const postcss = require('gulp-postcss')
-const cssnano = require('cssnano');
-// const autoreset = require('postcss-autoreset');
-const postcssPresetEnv = require('postcss-preset-env');
 const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const htmlmin = require('gulp-htmlmin');
+const cssnano = require('cssnano');
+const postcssPresetEnv = require('postcss-preset-env');
+const nunjucksRender = require('gulp-nunjucks-render');
 
 const path = require('path');
 const chalk = require("chalk");
 const $ = require("shelljs");
 
+// const autoreset = require('postcss-autoreset');
+//
+//
 
 const defaultTask = (cb) => {
   console.log(chalk.cyanBright("Hi from Gulp!"));
@@ -51,8 +54,12 @@ const moveCSS = (cb) => {
 };
 
 const moveHTML = (cb) => {
-  return src('*.html')
-    // .pipe(htmlmin({ collapseWhitespace: true }))
+  // return src('*.html')
+  return src('pages/**/*.+(html|nunjucks|njk)')
+    .pipe(nunjucksRender({
+      path: ['templates']
+    }))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(dest('dist/'));
 };
 
