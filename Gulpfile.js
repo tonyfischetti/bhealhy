@@ -13,14 +13,22 @@ const htmlmin = require('gulp-htmlmin');
 const cssnano = require('cssnano');
 const postcssPresetEnv = require('postcss-preset-env');
 const nunjucksRender = require('gulp-nunjucks-render');
+const ts = require("gulp-typescript");
+const sourcemaps = require('gulp-sourcemaps');
+const debug = require("gulp-debug");
+const concat = require('gulp-concat');
 
 const path = require('path');
 const chalk = require("chalk");
 const $ = require("shelljs");
 
 // const autoreset = require('postcss-autoreset');
-//
-//
+
+const tsProject = ts.createProject("tsconfig.json");
+
+
+
+
 
 const defaultTask = (cb) => {
   console.log(chalk.cyanBright("Hi from Gulp!"));
@@ -71,10 +79,14 @@ const moveStatic = (cb) => {
 
 // TODO: USE WEBPACK!
 const moveJS = (cb) => {
-  return src('js/*.js')
+  // return src('js/*.ts')
+  return src('js/*.+(js|ts)')
+    .pipe(sourcemaps.init())
+    .pipe(tsProject(ts.reporter.fullReporter()))
     .pipe(babel())
     .pipe(uglify())
     // .pipe(rename({ extname: '.min.js' }))
+    .pipe(sourcemaps.write('.'))
     .pipe(dest('dist/js/'));
 };
 
@@ -92,5 +104,6 @@ exports.mrproper = mrproper;
 exports.build = series(clean,
                        parallel(moveRootThings, moveCSS, moveHTML,
                                 moveStatic, moveJS));
+exports.moveJS = moveJS;
 exports.deploy = deploy;
 
