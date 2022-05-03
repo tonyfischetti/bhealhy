@@ -52,6 +52,11 @@ body {
     font-weight: bold;
 }
 
+.gold-text {
+    color: var(--Gold);
+    font-weight: bold;
+}
+
 .text-color-background {
     color: var(--BackgroundColor);
 }
@@ -141,7 +146,12 @@ a.nav-link:hover {
 
 #between-header-and-footer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+
+#between-header-and-footer-vert {
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -250,7 +260,7 @@ p#tagline {
 }
 
 .info-card-content {
-    font-family: var(--SansFontFamily);
+    /* font-family: var(--SansFontFamily); */
     font-size: 0.9em;
     padding-inline: 2em;
     max-width: 70ch;
@@ -258,7 +268,7 @@ p#tagline {
 }
 
 li {
-    font-family: var(--SansFontFamily);
+    /* font-family: var(--SansFontFamily); */
     font-size: 0.9em;
 }
 
@@ -400,8 +410,71 @@ footer {
 
 
 
+/* ------------------------------------------- */
+
+/* MISSION THINGS */
+
+.narrower {
+    max-width: 800px;
+}
+
+.info-card-multiple-split {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin-block: 2rem;
+}
+
+/* when smaller screens... */
+@media only screen and (max-width: 780px) {
+    .info-card-multiple-split {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .info-card-content {
+        padding: 2em;
+    }
+    .list-element-bee-big {
+        margin-top: 0px;
+    }
+}
+
+.list-element-bee-big {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.info-card-content .a-little-wider {
+    max-width: 100ch;
+}
+
+.a-little-wider {
+    max-width: 100ch;
+}
+
+.more-padding {
+    padding: 2em;
+}
+
+.bigger-font {
+    font-size: 1.1rem;
+}
+
+.more-bigger-font {
+    font-size: 1.3rem;
+}
+
+.more-top-margin {
+    margin-top: 2em;
+}
 
 
+/* ------------------------------------------- */
 
 
 

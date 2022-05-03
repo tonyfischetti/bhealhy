@@ -4,72 +4,56 @@
   Home
 {% endblock %}
 
-{% block betweenheaderandfooter %}
-<div id="between-header-and-footer">
+{% block middlebodycontainer %}
+<div id="middle-body-container">
 
-  <div id="stage-left">
-  </div>
+  {% include "partials/logo-and-tagline.html" %}
 
-  <div id="middle-body-container">
+  <p id="tagline"><span class="blue-green-text">Heal</span>thy Body, Soul &amp; Earth</p>
 
-    <!-- TODO: the logo has to be a link to homepage -->
-    <section id="logo-and-tagline">
-      <div id="prelude">
-        <img class="big-image"
-             src="./static/bees-and-words-circle-logo.png"
-             alt="B HEAL+thy logo">
-        <p id="tagline"><span class="blue-green-text">Heal</span>thy Body, Soul &amp; Earth</p>
+  <div id="info-card-img-split">
+
+    <div class="img-split split">
+      <img class="food-picture" src="./static/photos-of-food/sweet-wine-twists.jpg">
+    </div>
+
+    <div class="info-card-split blue-green-background white-text">
+      <p class="info-card-header">Our logo <span class="gold-text"><b>bee</b></span>speaks our name...</p>
+      <div class="info-card-content">
+        We aim to BE… HEALTHY.
+        The 3 bees stand for
+        <ol>
+          <li>Body</li>
+          <li>Soul</li>
+          <li>Earth</li>
+        </ol>
+        The flower of life design reminds us that EVERYTHING &amp; EVERYONE is connected.
       </div>
-    </section>
-
-    <div id="info-card-img-split">
-
-      <div class="img-split split">
-        <img class="food-picture" src="./static/photos-of-food/sweet-wine-twists.jpg">
+      <div class="info-card-footer">
+        Together we create CommUNITY!
       </div>
+    </div>
 
-      <div class="info-card-split blue-green-background white-text">
-        <p class="info-card-header">Our logo beespeaks our name...</p>
-        <div class="info-card-content">
-          We aim to BE… HEALTHY.
-          The 3 bees stand for
-          <ol>
-            <li>Body</li>
-            <li>Soul</li>
-            <li>Earth</li>
-          </ol>
-          The flower of life design reminds us that EVERYTHING &amp; EVERYONE is connected.
-        </div>
-        <div class="info-card-footer">
-          Together we create CommUNITY!
-        </div>
+  </div>        <!-- ends info-card-img-split -->
+
+
+  <div id="info-card-img-split">
+
+    <div class="info-card-split gold-background blue-green-text">
+      <p class="info-card-header">Lorem ipsum dolor</p>
+      <div class="info-card-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
       </div>
-
-    </div>        <!-- ends info-card-img-split -->
-
-
-    <div id="info-card-img-split">
-
-      <div class="info-card-split gold-background blue-green-text">
-        <p class="info-card-header">Lorem ipsum dolor</p>
-        <div class="info-card-content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-        </div>
-        <div class="info-card-footer">
-          deserunt mollit anim id est laborum
-        </div>
+      <div class="info-card-footer">
+        deserunt mollit anim id est laborum
       </div>
+    </div>
 
-      <div class="img-split split">
-        <img class="food-picture" src="./static/photos-of-food/paximathia.jpg">
-      </div>
+    <div class="img-split split">
+      <img class="food-picture" src="./static/photos-of-food/paximathia.jpg">
+    </div>
 
-    </div>        <!-- ends info-card-img-split -->
+  </div>        <!-- ends info-card-img-split -->
 
-  </div> <!-- inside body container end -->
-
-  <div id="stage-right">
-  </div>
-
-</div> <!-- between header and footer -->
+</div> <!-- inside body container end -->
 {% endblock %}

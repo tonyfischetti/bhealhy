@@ -59,7 +59,7 @@ const moveHTML = (cb) => {
     .pipe(nunjucksRender({
       path: ['templates']
     }))
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    // .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(dest('dist/'));
 };
 

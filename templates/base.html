@@ -32,6 +32,23 @@
     {% include "partials/navbar.html" %}
 
     {% block betweenheaderandfooter %}
+    <div id="between-header-and-footer">
+
+      {% block stageleft %}
+      <div id="stage-left">
+      </div>
+      {% endblock %}
+
+
+      {% block middlebodycontainer %}
+      <div id="middle-body-container">
+      </div>
+      {% endblock %}
+
+      {% block stageright %}
+      <div id="stage-right">
+      </div>
+      {% endblock %}
     {% endblock %}
 
     {% include "partials/footer.html" %}

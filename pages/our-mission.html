@@ -4,9 +4,89 @@
   Our Mission
 {% endblock %}
 
-{% block betweenheaderandfooter %}
-<div id="between-header-and-footer">
-  This is my mission
+{% block middlebodycontainer %}
+<div id="middle-body-container">
+
+  {% include "partials/logo-and-tagline.html" %}
+
+  <div class="narrower">
+
+    <div class="info-card-split blue-green-background white-text">
+      <div class="info-card-content a-little-wider more-padding bigger-font">
+        <p>Healing our body, soul &amp; earth by wisely choosing why we consume
+        every moment in thought, word &amp; deed.</p>
+
+        <p>HEAL+thy self by respecting what goes in and becomes us, others and the earth.</p>
+
+        <p>Healing comes with continuous and meaningful learning and action.<p>
+      </div>
+    </div>
+
+    <div class="info-card-multiple-split">
+      <div class="info-card-split gold-background blue-green-text">
+        <div class="info-card-content">
+          <div class="list-element-bee-big">
+            <img src="static/single-bee.png" height="20"/>
+            <b>BODY</b>
+          </div>
+          <p>Our highest quality ingredients are non-GMO, organic, vegan, unbleached,
+          and a few are gluten-free: All are not too sweet. One of the catalysts for
+          3B Healthy is a desire to offer the best ingredients to enliven my aging
+          parents and by extension everyone’s health.</p>
+        </div>
+      </div>
+
+      <div class="info-card-split gold-background blue-green-text">
+        <div class="info-card-content">
+          <div class="list-element-bee-big">
+            <img src="static/single-bee.png" height="20"/>
+            <b>SOUL</b>
+          </div>
+          <p>The soul is our innermost being, our heart, our center. All we
+          consume affects the soul’s wellbeing. Everyone’s thoughts and
+          feelings are mediated in their soul. Complimenting a gathering of
+          friends and family with a healthy treat enriches the encounter.</p>
+        </div>
+      </div>
+
+      <div class="info-card-split gold-background blue-green-text">
+        <div class="info-card-content">
+          <div class="list-element-bee-big">
+            <img src="static/single-bee.png" height="20"/>
+            <b>EARTH</b>
+          </div>
+          <p>What we take from the Earth has to balance what we return in exchange.
+          Our compostable packaging honors creation rather than contributing to the
+          enormous <a href="https://www.theworldcounts.com/challenges/planet-earth/state-of-the-planet/world-waste-facts/story"
+                      target="_blank">global waste.</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-card-split blue-green-background white-text">
+      <div class="info-card-content a-little-wider more-padding bigger-font">
+        <div>
+          World Centric provides zero waste solutions to reduce environmental impact.
+          Their containers are made from NatureWorks IngeoTM PLA compostable plastic,
+          derived from plants grown in the U.S.
+          <ul>
+            <li>Suitable for food up to 120° F</li>
+            <li>Freezer safe</li>
+            <li>Not microwavable</li>
+            <li>Composts in 2-4 months in a commercial composting facility,
+              or 4-6 months in home composter. The packages DO NOT go into your recycle bin.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-card-split gold-background blue-green-text more-top-margin">
+      <div class="info-card-content a-little-wider more-padding more-bigger-font">
+        <p>Our values are reflected in the way we choose to live ~ TODAY.</p>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 {% endblock %}
