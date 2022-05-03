@@ -109,8 +109,7 @@ a.nav-link {
     font-weight: 700;
 }
 
-a.nav-link:hover,
-a.nav-link:focus {
+a.nav-link:hover {
     background-color: var(--BlueGreen);
     color: var(--Gold);
 }
@@ -334,8 +333,7 @@ footer {
     text-decoration: none;
 }
 
-.footer-link:hover,
-.footer-link:focus {
+.footer-link:hover {
     color: var(--Gold);
 }
 
