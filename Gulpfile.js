@@ -50,7 +50,6 @@ const moveCSS = (cb) => {
     .pipe(dest('dist/styles/'));
 };
 
-// TODO: actually do processing
 const moveHTML = (cb) => {
   return src('*.html')
     // .pipe(htmlmin({ collapseWhitespace: true }))
@@ -72,6 +71,7 @@ const moveJS = (cb) => {
     .pipe(dest('dist/js/'));
 };
 
+// TODO: have two modes (including one that minifies)
 
 const deploy = (cb) => {
   $.exec("rsync -Phav --delete dist/ polygram:~/3BHealthy.thepolygram.com");
