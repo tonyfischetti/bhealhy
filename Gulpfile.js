@@ -11,6 +11,7 @@ const htmlmin = require('gulp-htmlmin');
 const cssnano = require('cssnano');
 const postcssPresetEnv = require('postcss-preset-env');
 const nunjucksRender = require('gulp-nunjucks-render');
+const mode = require("gulp-mode")();
 
 const webpack = require('webpack')
 const webpackConfig = require('./webpack.config.js')
@@ -47,8 +48,9 @@ const moveCSS = (cb) => {
   return src('styles/*.css')
     .pipe(postcss([
                     postcssPresetEnv(),
-                    cssnano()
                   ]))
+    .pipe(mode.production(postcss([
+      cssnano() ])))
     .pipe(dest('dist/styles/'));
 };
 
@@ -57,7 +59,7 @@ const moveHTML = (cb) => {
     .pipe(nunjucksRender({
       path: ['templates']
     }))
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(mode.production(htmlmin({ collapseWhitespace: true })))
     .pipe(dest('dist/'));
 };
 
