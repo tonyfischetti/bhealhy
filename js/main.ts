@@ -1,6 +1,6 @@
-'use strict';
 
-import { zzz } from './utils.ts';
+
+import { zzz } from './utils';
 
 
 const start = () => {

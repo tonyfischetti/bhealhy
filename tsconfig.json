@@ -1,10 +1,26 @@
 {
+  "exclude": ["node_modules", "Gulpfile.js"],
   "compilerOptions": {
     "target": "es2015",
     "noImplicitAny": true,
     "noEmitOnError": true,
     "sourceMap": true,
     "outDir": "dist/js",
-    "allowJs": true
+    "allowJs": true,
+    "checkJs": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "declaration": true,
+    "declarationDir": "js/types",
+    "declarationMap": true,
+    "explainFiles": true,
+    "extendedDiagnostics": true,
+    "listFiles": true,
+    "noErrorTruncation": true,
+    "pretty": true,
+
+    "removeComments": false
   }
 }
