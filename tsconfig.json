@@ -1,7 +1,4 @@
 {
-  "files": [
-             "js/zzz.ts"
-           ],
   "compilerOptions": {
     "target": "es2015",
     "noImplicitAny": true,

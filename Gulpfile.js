@@ -3,8 +3,6 @@
 require('dotenv').config()
 
 const { src, dest, series, parallel } = require('gulp');
-const babel = require('gulp-babel');
-const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 const postcss = require('gulp-postcss')
 const imagemin = require('gulp-imagemin');
@@ -13,18 +11,13 @@ const htmlmin = require('gulp-htmlmin');
 const cssnano = require('cssnano');
 const postcssPresetEnv = require('postcss-preset-env');
 const nunjucksRender = require('gulp-nunjucks-render');
-const ts = require("gulp-typescript");
-const sourcemaps = require('gulp-sourcemaps');
-const debug = require("gulp-debug");
-const concat = require('gulp-concat');
+
+const webpack = require('webpack')
+const webpackConfig = require('./webpack.config.js')
 
 const path = require('path');
 const chalk = require("chalk");
 const $ = require("shelljs");
-
-// const autoreset = require('postcss-autoreset');
-
-const tsProject = ts.createProject("tsconfig.json");
 
 
 
@@ -43,6 +36,7 @@ const clean = (cb) => {
 const mrproper = (cb) => {
   return cache.clearAll(cb);
 };
+
 
 const moveRootThings = (cb) => {
   return src('root-things/*.*')
@@ -77,17 +71,18 @@ const moveStatic = (cb) => {
   .pipe(dest('dist/static/'))
 };
 
-// TODO: USE WEBPACK!
 const moveJS = (cb) => {
-  // return src('js/*.ts')
-  return src('js/*.+(js|ts)')
-    .pipe(sourcemaps.init())
-    .pipe(tsProject(ts.reporter.fullReporter()))
-    .pipe(babel())
-    .pipe(uglify())
-    // .pipe(rename({ extname: '.min.js' }))
-    .pipe(sourcemaps.write('.'))
-    .pipe(dest('dist/js/'));
+  return new Promise((resolve, reject) => {
+    webpack(webpackConfig, (err, stats) => {
+      if (err) {
+        return reject(err);
+      }
+      if (stats.hasErrors()) {
+        return reject(new Error(stats.compilation.errors.join('\n')));
+      }
+      resolve();
+      })
+  })
 };
 
 // TODO: have two modes (including one that minifies)
