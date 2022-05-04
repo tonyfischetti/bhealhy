@@ -12,6 +12,7 @@ const cssnano = require('cssnano');
 const postcssPresetEnv = require('postcss-preset-env');
 const nunjucksRender = require('gulp-nunjucks-render');
 const mode = require("gulp-mode")();
+const jsdoc = require('gulp-jsdoc3');
 
 const webpack = require('webpack')
 const webpackConfig = require('./webpack.config.js')
@@ -31,6 +32,7 @@ const defaultTask = (cb) => {
 
 const clean = (cb) => {
   $.rm('-rf', path.resolve(__dirname, 'dist'));
+  $.rm('-rf', path.resolve(__dirname, 'docs'));
   cb();
 };
 
@@ -83,6 +85,14 @@ const moveJS = (cb) => {
   })
 };
 
+const doc = (cb) => {
+  const config = require('./doc-jsdoc.json');
+  // return src(['README.md', './js/**/*.js', './js/**/*.ts'], {read: false})
+  // return src("js/**/*.*")
+  return src("js/utils.ts")
+    .pipe(jsdoc(config, cb));
+};
+
 // TODO: have two modes (including one that minifies)
 
 const deploy = (cb) => {
@@ -99,4 +109,5 @@ exports.build = series(clean,
                                 moveStatic, moveJS));
 exports.moveJS = moveJS;
 exports.deploy = deploy;
+exports.doc = doc;
 
