@@ -46,9 +46,6 @@ const moveRootThings = (cb) => {
 const moveCSS = (cb) => {
   return src('styles/*.css')
     .pipe(postcss([
-                    // autoreset({
-                    //   reset: "initial"
-                    // }),
                     postcssPresetEnv(),
                     cssnano()
                   ]))
@@ -56,12 +53,11 @@ const moveCSS = (cb) => {
 };
 
 const moveHTML = (cb) => {
-  // return src('*.html')
   return src('pages/**/*.+(html|nunjucks|njk)')
     .pipe(nunjucksRender({
       path: ['templates']
     }))
-    // .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(dest('dist/'));
 };
 
