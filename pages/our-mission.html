@@ -4,13 +4,17 @@
   Our Mission
 {% endblock %}
 
+{% block stylesheets %}
+  <link rel="stylesheet" href="styles/style.css">
+{% endblock %}
+
+
 {% block afternavbar %}
   {% include "partials/logo-and-tagline-thin.html" %}
 {% endblock %}
 
 {% block middlebodycontainer %}
 <div id="middle-body-container">
-
 
   <div class="narrower">
 
@@ -31,7 +35,7 @@
     </div>
 
     <div class="info-card-multiple-split">
-      <div class="info-card-split gold-background blue-green-text">
+      <div class="info-card-split gold-background blue-green-text blue-green-shadow">
         <div class="info-card-content">
           <div class="list-element-bee-big">
             <img src="static/single-bee.png" height="20"/>
@@ -44,7 +48,7 @@
         </div>
       </div>
 
-      <div class="info-card-split gold-background blue-green-text">
+      <div class="info-card-split gold-background blue-green-text blue-green-shadow">
         <div class="info-card-content">
           <div class="list-element-bee-big">
             <img src="static/single-bee.png" height="20"/>
@@ -57,7 +61,7 @@
         </div>
       </div>
 
-      <div class="info-card-split gold-background blue-green-text">
+      <div class="info-card-split gold-background blue-green-text blue-green-shadow">
         <div class="info-card-content">
           <div class="list-element-bee-big">
             <img src="static/single-bee.png" height="20"/>

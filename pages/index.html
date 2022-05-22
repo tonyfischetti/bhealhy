@@ -4,56 +4,92 @@
   Home
 {% endblock %}
 
+{% block stylesheets %}
+  <link rel="stylesheet" href="styles/style.css">
+{% endblock %}
+
+
 {% block middlebodycontainer %}
+
 <div id="middle-body-container">
 
-  {% include "partials/logo-and-tagline-2.html" %}
+  {% include "partials/logo-and-tagline-3.html" %}
 
-  {# <p id="tagline"><span class="blue-green-text">Heal</span>thy Body, Soul &amp; Earth</p> #}
+  <div class="less-narrower">
 
-  <div id="info-card-img-split">
+    <div id="intro-1">
+      <p>Direct from Vasiliki’s legendary kitchen comes a health conscious take
+      on recipes handed down through the generations. Vasi has taken ancestral
+      recipes and infused them with Vegan, NonGMO [Not Genetically Modified],
+      Organic, Gluten Free, bleach-free flour and not too sweet. She creates
+      one of-a-kind cookies &amp; desserts made with pure and simple
+      ingredients. 3 B Healthy highlights classic Mediterranean inspired
+      café desserts with a healthier twist.</p>
 
-    <div class="img-split split">
-      <img class="food-picture" src="./static/photos-of-food/sweet-wine-twists.jpg">
+      <p class="right-align eight00">You will taste and feel the difference!</p>
     </div>
 
-    <div class="info-card-split blue-green-background white-text">
-      <p class="info-card-header">Our logo <span class="gold-text"><b>bee</b></span>speaks our name...</p>
-      <div class="info-card-content">
-        We aim to BE… HEALTHY.
-        The 3 bees stand for
-        <ol>
-          <li>Body</li>
-          <li>Soul</li>
-          <li>Earth</li>
-        </ol>
-        The flower of life design reminds us that EVERYTHING &amp; EVERYONE is connected.
+
+
+    <div id="info-card-img-split">
+
+      <div class="img-split split">
+        <img class="food-picture" src="./static/photos-of-food/sweet-wine-twists.jpg">
       </div>
-      {# <div class="info-card-footer"> #}
-      {#   Together we create CommUNITY! #}
-      {# </div> #}
-    </div>
 
-  </div>        <!-- ends info-card-img-split -->
+      <div class="info-card-split blue-green-background white-text">
+        <p class="info-card-header">Our logo <span class="gold-text"><b>bee</b></span>speaks our name...</p>
+        <div class="info-card-content">
+          We aim to BE… HEALTHY.
+          The 3 bees stand for
+          {# <ol> #}
+          {#   <li>Body</li> #}
+          {#   <li>Soul</li> #}
+          {#   <li>Earth</li> #}
+          {# </ol> #}
 
-
-  <div id="info-card-img-split">
-
-    <div class="info-card-split gold-background blue-green-text">
-      <p class="info-card-header">Lorem ipsum dolor</p>
-      <div class="info-card-content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        <div class="footer-link-set-item indent-a-little">
+          <img src="./static/single-bee.png" class="footer-icon not-footer-tho">
+          <p>Body</p>
+        </div>
+        <div class="footer-link-set-item indent-a-little">
+          <img src="./static/single-bee.png" class="footer-icon not-footer-tho">
+          <p>Soul</p>
+        </div>
+        <div class="footer-link-set-item indent-a-little">
+          <img src="./static/single-bee.png" class="footer-icon not-footer-tho">
+          <p>Earth</p>
+        </div>
+        <br/>
+          The flower of life design reminds us that EVERYTHING &amp; EVERYONE is connected.
+        </div>
+        {# <div class="info-card-footer"> #}
+        {#   Together we create CommUNITY! #}
+        {# </div> #}
       </div>
-      <div class="info-card-footer">
-        deserunt mollit anim id est laborum
+
+    </div>        <!-- ends info-card-img-split -->
+
+
+    <div id="info-card-img-split">
+
+      <div class="info-card-split gold-background blue-green-text">
+        <p class="info-card-header">Lorem ipsum dolor</p>
+        <div class="info-card-content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        </div>
+        <div class="info-card-footer">
+          deserunt mollit anim id est laborum
+        </div>
       </div>
-    </div>
 
-    <div class="img-split split">
-      <img class="food-picture" src="./static/photos-of-food/paximathia.jpg">
-    </div>
+      <div class="img-split split">
+        <img class="food-picture" src="./static/photos-of-food/paximathia.jpg">
+      </div>
 
-  </div>        <!-- ends info-card-img-split -->
+    </div>        <!-- ends info-card-img-split -->
+
+  </div>
 
 </div> <!-- inside body container end -->
 {% endblock %}

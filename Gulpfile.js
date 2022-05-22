@@ -68,7 +68,12 @@ const moveHTML = (cb) => {
 const moveStatic = (cb) => {
   return src('static/**/*.+(png|jpg|gif|svg)')
   .pipe(cache(imagemin()))
-  .pipe(dest('dist/static/'))
+  .pipe(dest('dist/static/'));
+};
+
+const moveAssets = (cb) => {
+  return src('assets/**/*')
+  .pipe(dest('dist/assets/'));
 };
 
 const moveJS = (cb) => {
@@ -106,7 +111,7 @@ exports.clean = clean;
 exports.mrproper = mrproper;
 exports.build = series(clean,
                        parallel(moveRootThings, moveCSS, moveHTML,
-                                moveStatic, moveJS));
+                                moveStatic, moveJS, moveAssets));
 exports.moveJS = moveJS;
 exports.deploy = deploy;
 exports.doc = doc;

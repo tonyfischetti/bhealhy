@@ -4,6 +4,13 @@
   Menu
 {% endblock %}
 
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/menu.css">
+{% endblock %}
+
+
 {% block afternavbar %}
   {% include "partials/logo-and-tagline-thin.html" %}
 {% endblock %}
@@ -12,7 +19,274 @@
 {% block middlebodycontainer %}
 
 <div id="middle-body-container">
-  This is the menu
+
+    <div class="menu-item-holder">
+
+      <div class="menu-item">
+        <div class="menu-item-header">
+          <div class="menu-item-title">
+            Vasi’s Vegan Paximadia
+          </div>
+          <div class="menu-grower">
+          </div>
+          <div class="food-type-badges">
+            <img class="badge" src="./static/food-type-logos/vegan.svg"/>
+            <img class="badge" src="./static/food-type-logos/gmo-free.svg"/>
+          </div>
+        </div>
+        <div class="title-overflow"> </div>
+        <div class="title-body-sep">
+        </div>
+        <div class="menu-item-body">
+          <div class="pic-and-description">
+            <img class="menu-photo"
+                 src="./static/photos-of-food/paximathia.jpg"/>
+            <div class="description">
+              A flavorful multigrain Greek Biscotti, not too sweet,
+              delicately crisp on its own. Perfect compliment to your
+              favorite  coffee in the morning and tea at night.
+            </div>
+          </div>
+          <div class="ingredients">
+            Ingredients: Unbleached <b>flour</b>, white whole wheat flour,
+            oat flour, orange juice, avocado/olive oil, walnuts, organic
+            sugar, organic ground flax, baking powder, organic cinnamon,
+            pure vanilla, baking soda
+          </div>
+          <div class="contains">
+            Contains: Wheat, nuts
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-item-header">
+          <div class="menu-item-title">
+            Oatmeal CC Cookies
+          </div>
+          <div class="menu-grower">
+          </div>
+          <div class="food-type-badges">
+            <img class="badge" src="./static/food-type-logos/gluten-free.svg"/>
+            <img class="badge" src="./static/food-type-logos/vegan.svg"/>
+            <img class="badge" src="./static/food-type-logos/gmo-free.svg"/>
+          </div>
+        </div>
+        <div class="title-overflow">
+        </div>
+        <div class="title-body-sep">
+        </div>
+        <div class="menu-item-body">
+          <div class="pic-and-description">
+            <img class="menu-photo"
+                 src="./static/photos-of-food/oatmeal-2.jpg"/>
+            <div class="description">
+              <smaller>[with Currants &amp; mini chocolate Chips]</smaller>
+              <br/><br/>
+              A hardy gluten free oatmeal cookie filled with mini chocolate
+              chips &amp; currents packed with polyphenols
+              <span class="grey-text">(antioxidants)</span>
+            </div>
+          </div>
+          <div class="ingredients">
+            Ingredients: One Degree Organic Foods GF Sprouted Rolled Oats,
+            Gluten Free flour, brown sugar, <b>tahini</b>,
+            orange juice/water, chocolate mini chips, currents,
+            organic cinnamon, salt, baking soda
+            <br/> <br/>
+            Enjoy Life chocolate semi-sweet chips: Pure cane sugar,
+            unsweetened chocolate, cocoa butter
+          </div>
+          <div class="contains">
+            Contains: Sesame
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-item-header">
+          <div class="menu-item-title">
+            Sweet Wine Twists
+          </div>
+          <div class="menu-grower">
+          </div>
+          <div class="food-type-badges">
+            <img class="badge" src="./static/food-type-logos/vegan.svg"/>
+            <img class="badge" src="./static/food-type-logos/gmo-free.svg"/>
+          </div>
+        </div>
+        <div class="title-overflow"> </div>
+        <div class="title-body-sep">
+        </div>
+        <div class="menu-item-body">
+          <div class="pic-and-description">
+            <img class="menu-photo"
+                 src="./static/photos-of-food/sweet-wine-twists.jpg"/>
+            <div class="description">
+              A cookie with sweet wine &amp; warm cinnamon tones. The twist
+              represents the inseparable combination of joys and sorrows in
+              our daily lives
+            </div>
+          </div>
+          <div class="ingredients">
+            Ingredients: Unbleached <b>flour</b>, white whole wheat
+            <b>flour</b>, oat flour, avocado/olive oil, sweet wine,
+            organic sugar, organic ground flax, baking powder, cinnamon,
+            baking soda
+          </div>
+          <div class="contains">
+            Contains: Wheat
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-item-header">
+          <div class="menu-item-title">
+            Double Chocolate Paximadia
+          </div>
+          <div class="menu-grower">
+          </div>
+          <div class="food-type-badges">
+            <img class="badge" src="./static/food-type-logos/vegan.svg"/>
+            <img class="badge" src="./static/food-type-logos/gmo-free.svg"/>
+          </div>
+        </div>
+        <div class="title-overflow"> </div>
+        <div class="title-body-sep">
+        </div>
+        <div class="menu-item-body">
+          <div class="pic-and-description">
+            <img class="menu-photo"
+                 src="./static/photos-of-food/chocolate-paximathia.jpg"/>
+            <div class="description">
+              A chocolate lover's delight! Crispy chocolate biscotti filled
+              with mini chocolate chips.
+            </div>
+          </div>
+          <div class="ingredients">
+            Ingredients: Unbleached <b>flour</b>, oat flour, white whole wheat
+            <b>flour</b>, chocolate chips, avocado/olive oil, orange juice,
+            organic coffee, cocoa powder, brown sugar, organic sugar,
+            baking powder, organic ground flax, pure vanilla,
+            baking soda, salt
+          </div>
+          <div class="contains">
+            Contains: Wheat
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-item-header">
+          <div class="menu-item-title">
+            Honey Dipped Date Cookie
+          </div>
+          <div class="menu-grower">
+          </div>
+          <div class="food-type-badges">
+            <img class="badge" src="./static/food-type-logos/vegan.svg"/>
+            <img class="badge" src="./static/food-type-logos/gmo-free.svg"/>
+          </div>
+        </div>
+        <div class="title-overflow"> </div>
+        <div class="title-body-sep">
+        </div>
+        <div class="menu-item-body">
+          <div class="pic-and-description">
+            <img class="menu-photo"
+                 src="./static/photos-of-food/honey-dipped-cookies.jpg"/>
+            <div class="description">
+              An ambrosial Greek dessert <em>(melomakarona)</em> enhanced
+              with bite sized "bits of dates" and sprinkled with walnuts.
+            </div>
+          </div>
+          <div class="ingredients">
+            Ingredients: Unbleached <b>flour</b>, white whole wheat
+            <b>flour</b>, oat flour, avocado/olive oil, brandy, orange juice,
+            honey, walnuts, organic sugar, water, organic ground flax,
+            cinnamon, orange zest, baking powder &amp; soda
+          </div>
+          <div class="contains">
+            Contains: Wheat, nuts
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-item-header">
+          <div class="menu-item-title">
+            Baklava
+          </div>
+          <div class="menu-grower">
+          </div>
+          <div class="food-type-badges">
+            <img class="badge" src="./static/food-type-logos/vegan.svg"/>
+          </div>
+        </div>
+        <div class="title-overflow"> </div>
+        <div class="title-body-sep">
+        </div>
+        <div class="menu-item-body">
+          <div class="pic-and-description">
+            <img class="menu-photo"
+                 src="./static/photos-of-food/baklava.jpg"/>
+            <div class="description">
+              One of the most famous Mediterranean desserts. Multiple layers
+              of crispy filo dough and cinnamon walnuts, drizzled with a
+              flavorful citric &amp; spice syrup.
+            </div>
+          </div>
+          <div class="ingredients">
+            Ingredients: Filo, <b>walnuts</b>, water, organic sugar,
+            coconut/avocado oil, lemon juice and zest, orange juice and zest,
+            organic cinnamon, cloves
+          </div>
+          <div class="contains">
+            Contains: Wheat, nuts
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-item-header">
+          <div class="menu-item-title">
+            Pasta Flora
+          </div>
+          <div class="menu-grower">
+          </div>
+          <div class="food-type-badges">
+            <img class="badge" src="./static/food-type-logos/vegan.svg"/>
+          </div>
+        </div>
+        <div class="title-overflow"> </div>
+        <div class="title-body-sep">
+        </div>
+        <div class="menu-item-body">
+          <div class="pic-and-description">
+            <img class="menu-photo"
+                 src="./static/photos-of-food/pasta-flora.jpg"/>
+            <div class="description">
+              A delectable hand woven crust with a marmalade center makes
+              this dessert perfect to share with others.
+            </div>
+          </div>
+          <div class="ingredients">
+            Ingredients: Unbleached <b>flour</b>, white whole wheat
+            <b>flour</b>, oat flour, brandy/whiskey, orange juice, apricot
+            or raspberry marmalade, organic sugar or agave, baking powder,
+            lemon rind
+          </div>
+          <div class="contains">
+            Contains: Wheat, liquor
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
 </div>
 
 {% endblock %}

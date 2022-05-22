@@ -1,0 +1,105 @@
+
+
+
+/* ------------------------------------------- */
+
+@font-face {
+  font-family: "Corsiva";
+  src: local('Corsica'),
+       url('../assets/fonts/corsiva.woff2') format('woff2');
+}
+
+/* ------------------------------------------- */
+
+:root {
+    --MenuTitleFontFamily: "Corsiva";
+    --MenuOtherFontFamily: "Spectral";
+}
+
+
+.menu-item-holder {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    /* border-style: solid; */
+    /* border-width: 2px; */
+    padding: 13px;
+}
+
+.menu-item-header {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    width: 100%;
+}
+
+.menu-item-title {
+    align-self: center;
+    font-family: Corsiva;
+    font-size: 2rem;
+}
+
+.menu-grower {
+    flex-grow: 1;
+}
+
+.badge {
+    height: 30px;
+    align-self: center;
+}
+
+.title-body-sep {
+    background-color: grey;
+    height: 1px;
+    width: 80%;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.pic-and-description {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.menu-photo {
+    width: 100px;
+    height: 100px;
+    align-self: center;
+}
+
+.description {
+    font-size: .9rem;
+    align-self: center;
+}
+
+.ingredients {
+    font-size: .6rem;
+    padding: 10px;
+}
+
+.contains {
+    font-size: .7rem;
+    text-align: center;
+}
+
+.grey-text {
+    color: grey;
+}
+
+.title-overflow {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+
