@@ -6,6 +6,12 @@
 
 {% block stylesheets %}
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/slider.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+        crossorigin="anonymous"></script>
+
 {% endblock %}
 
 
@@ -17,71 +23,27 @@
 
 {% block middlebodycontainer %}
 
-<div id="middle-body-container">
+<div class="slider">
+  <div class="slider-photos">
 
-  <div class="narrower">
+    <img src="../static/photos-of-food/baklava.jpg" class="slider-pic shown" alt="">
 
-    <div id="story-main">
+    <img src="../static/photos-of-food/bouquet.jpg" class="slider-pic" alt="">
+    <img src="../static/photos-of-food/chocolate-paximathia.jpg" class="slider-pic" alt="">
+    <img src="../static/photos-of-food/date-cookie.jpg" class="slider-pic" alt="">
+    <img src="../static/photos-of-food/honey-dipped-cookies.jpg" class="slider-pic" alt="">
+    <img src="../static/photos-of-food/oatmeal-2.jpg" class="slider-pic" alt="">
+    <img src="../static/photos-of-food/pasta-flora.jpg" class="slider-pic" alt="">
+    <img src="../static/photos-of-food/paximathia.jpg" class="slider-pic" alt="">
+    <img src="../static/photos-of-food/sweet-wine-twists.jpg" class="slider-pic" alt="">
 
-      <img id="story-photo-1" class="people-picture three00-width"
-           align="left" src="static/photos-of-people/IMG_6757.jpg"/>
-
-      <p>Dr. Vasiliki Tsigas-Fotinis is the founder of 3 B Healthy. This new
-      venture reflects her lifelong motto:</p>
-
-      <p class="gold-text italic-text">May our learning never end and may
-      our love for others weave community!</p>
-
-      <p>The Tsigas-Fotinis family comes from
-      a cultural heritage steeped in the values and practice of hospitality with
-      abundant home-cooked feasts. For decades, Vasiliki has opened her home
-      for celebrations emphasizing the importance of each person's
-      <span class="gold-text">presence</span>
-      rather than <span class="italic-text">presents</span>!
-      Continuing the generations of traditions of her Greek
-      forebears, her home is open to all&mdash;family, friends, strangers, newcomers,
-      far and near.</p>
+    <div class="buttons">
+      <div class="prev"></div>
+      <div class="next"></div>
     </div>
-
-    <div id="story-second">
-      <p class="jcenter">We gather first in gratitude to God, offering what's best for
-      everyone's physical &amp; spiritual health. Our planet's health and wellbeing
-      are respected by minimizing waste. 3 B Healthy isn't just about healthy
-      desserts, it's about building and
-      <span class="cool-purple-text eight00">bee</span>ing commUNITY!</p>
-
-      <img id="story-photo-2" class="people-picture three00-width"
-           src="static/photos-of-people/2005_01.jpg"/>
-    </div>
-
-    <div class="info-card-multiple-split">
-      <div class="info-card-split-2">
-        <div id="nj-info" class="info-card-content">
-          New Jersey recently (October 2021) approved their
-          <a href="https://www.state.nj.us/health/ceohs/phfpp/retailfood/cottagefood.shtml?fbclid=IwAR2IUzdh5Tl16RmyA4WvbO5aK2EqR-1qSxTqfIfuMSNFv--akiin9sSMzF0">Cottage Food Operators</a>
-          - Home Bakers laws.* To comply with the laws of NJ, I received my CFO
-          (Coge Food Operator permit) #186 on 11/10/21, Food Protection Manager
-          Certification #L2SC-3-014154 on 10/12/21 and Roxbury Township Zoning Permit
-          #ZA-11-21-904 on 11/10/21. Our family decided to share our hospitality with
-          the community and beyond, now with the new NJ Home Bakers - CFO laws which
-          help make this possible.
-        </div>
-
-        <div id="explainer" class="info-card-content">
-          *CFO explained: New Jersey historically prohibited the sale of home
-          baked goods but has now joined 49 other states in allowing cottage food
-          operations. The NJ Health Department allows CFO to only retail their goods
-          to customers directly either by picking up or personal delivery. They
-          are allowed to sell at farm markets, farm stands or NJ temporary food
-          establishments. Products cannot be mailed and must only be sold in the
-          state of NJ.
-        </div>
-      </div>
-    </div>
-
   </div>
-
 </div>
+
 
 {% endblock %}
 

@@ -47,7 +47,7 @@ const moveRootThings = (cb) => {
 };
 
 const moveCSS = (cb) => {
-  return src('styles/*.css')
+  return src('styles/**/*.css')
     .pipe(postcss([
                     postcssPresetEnv(),
                   ]))
@@ -67,27 +67,32 @@ const moveHTML = (cb) => {
 
 const moveStatic = (cb) => {
   return src('static/**/*.+(png|jpg|gif|svg)')
-  .pipe(cache(imagemin()))
-  .pipe(dest('dist/static/'));
+    .pipe(cache(imagemin()))
+    .pipe(dest('dist/static/'));
 };
 
 const moveAssets = (cb) => {
   return src('assets/**/*')
-  .pipe(dest('dist/assets/'));
+    .pipe(dest('dist/assets/'));
 };
 
+// const moveJS = (cb) => {
+//   return new Promise((resolve, reject) => {
+//     webpack(webpackConfig, (err, stats) => {
+//       if (err) {
+//         return reject(err);
+//       }
+//       if (stats.hasErrors()) {
+//         return reject(new Error(stats.compilation.errors.join('\n')));
+//       }
+//       resolve();
+//       })
+//   })
+// };
+
 const moveJS = (cb) => {
-  return new Promise((resolve, reject) => {
-    webpack(webpackConfig, (err, stats) => {
-      if (err) {
-        return reject(err);
-      }
-      if (stats.hasErrors()) {
-        return reject(new Error(stats.compilation.errors.join('\n')));
-      }
-      resolve();
-      })
-  })
+  return src('js/**/*.+(js)')
+    .pipe(dest('dist/js/'));
 };
 
 const doc = (cb) => {
