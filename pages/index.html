@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="styles/style.css">
 {% endblock %}
 
+{% block additionaljs %}
+  <script src="js/carousel.js" type="module"></script>
+{% endblock %}
 
 {% block middlebodycontainer %}
 
@@ -38,15 +41,11 @@
       </div>
 
       <div class="info-card-split blue-green-background white-text">
-        <p class="info-card-header">Our logo <span class="gold-text"><b>bee</b></span>speaks our name...</p>
+        <p class="info-card-header">Our logo <span class="gold-text"><b>bee</b>
+        </span>speaks our name...</p>
         <div class="info-card-content">
           We aim to BE… HEALTHY.
           The 3 bees stand for
-          {# <ol> #}
-          {#   <li>Body</li> #}
-          {#   <li>Soul</li> #}
-          {#   <li>Earth</li> #}
-          {# </ol> #}
 
         <div class="footer-link-set-item indent-a-little">
           <img src="./static/single-bee.png" class="footer-icon not-footer-tho">
@@ -63,9 +62,6 @@
         <br/>
           The flower of life design reminds us that EVERYTHING &amp; EVERYONE is connected.
         </div>
-        {# <div class="info-card-footer"> #}
-        {#   Together we create CommUNITY! #}
-        {# </div> #}
       </div>
 
     </div>        <!-- ends info-card-img-split -->
@@ -76,7 +72,9 @@
       <div class="info-card-split gold-background blue-green-text">
         <p class="info-card-header">Lorem ipsum dolor</p>
         <div class="info-card-content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
         </div>
         <div class="info-card-footer">
           deserunt mollit anim id est laborum
@@ -88,6 +86,12 @@
       </div>
 
     </div>        <!-- ends info-card-img-split -->
+
+
+    <!-- carousel -->
+
+
+
 
   </div>
 
