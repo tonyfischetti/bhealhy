@@ -5,7 +5,7 @@
  * @param {string} message - The message to print
  * @return {boolean}
  */
-export const zzz = (message: string) => {
+export const zzz = message => {
   console.log(`zzz says ${message}`);
   return true;
 };

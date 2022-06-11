@@ -6,7 +6,7 @@ import { Splide } from './vendor/splide.esm.js';
 
 
 const start = () => {
-  console.log("DOM loaded");
+  console.log("carousel js loaded");
 
 
   const splide = new Splide("#main-slider",

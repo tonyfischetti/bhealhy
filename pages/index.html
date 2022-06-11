@@ -6,6 +6,7 @@
 
 {% block stylesheets %}
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/vendor/splide.min.css">
 {% endblock %}
 
 {% block additionaljs %}
@@ -37,7 +38,7 @@
     <div id="info-card-img-split">
 
       <div class="img-split split">
-        <img class="food-picture" src="./static/photos-of-food/sweet-wine-twists.jpg">
+        <img class="food-picture" src="./static/more-food/bouquet.jpg"/>
       </div>
 
       <div class="info-card-split blue-green-background white-text">
@@ -70,19 +71,24 @@
     <div id="info-card-img-split">
 
       <div class="info-card-split gold-background blue-green-text">
-        <p class="info-card-header">Lorem ipsum dolor</p>
         <div class="info-card-content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-        </div>
-        <div class="info-card-footer">
-          deserunt mollit anim id est laborum
+          <em><b>Vasi's Vegan Paximathia</b></em> have become legendary. Her love
+          of hospitality has brought thousands together over decades which
+          perfected her recipes. We currently feature 4 cookies: Vasi’s
+          Vegan Paximadia, Sweet Wine Twists, Double Chocolate Paximadia
+          and GF Oatmeal Currant &amp; Chip Cookies, all available in our
+          Sampler Package or sold separately, in addition Honey Dipped
+          Date Cookies, Vegan Baklava &amp; Pasta Flora pastries. These
+          items may be picked up or delivered only in NJ. They will also
+          be available at The Madison Farmers Market* and for special
+          occasion orders. 
+          <br/>
+          <small>* Madison Farmers Market, Dodge Field, between Central &amp; Greenwood Avenues from 1-6pm every Thursday from May 19 till November 17, 2022.</small>
         </div>
       </div>
 
       <div class="img-split split">
-        <img class="food-picture" src="./static/photos-of-food/paximathia.jpg">
+        <img class="food-picture" src="./static/more-food/baklavas.jpg"/>
       </div>
 
     </div>        <!-- ends info-card-img-split -->
@@ -91,6 +97,77 @@
     <!-- carousel -->
 
 
+    <div id="holder-of-carousel">
+
+      <section id="main-slider" class="splide" aria-label="My Awesome Gallery">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide" caption="Baklava">
+              <img class="slide-image" src="./static/photos-of-food/baklava.jpg" alt=""
+              text="baklava"/>
+            </li>
+            <li class="splide__slide" caption="Chocolate paximatia">
+              <img class="slide-image" src="./static/photos-of-food/chocolate-paximathia.jpg" alt="" />
+            </li>
+            <li class="splide__slide" caption="Date cookie">
+              <img class="slide-image" src="./static/photos-of-food/date-cookie.jpg" alt="" />
+            </li>
+            <li class="splide__slide" caption="Honey-dipped cookes">
+              <img class="slide-image" src="./static/photos-of-food/honey-dipped-cookies.jpg" alt="" />
+            </li>
+            <li class="splide__slide" caption="Oatmeal cookie">
+              <img class="slide-image" src="./static/photos-of-food/oatmeal-2.jpg" alt="" />
+            </li>
+            <li class="splide__slide" caption="Pasta flora">
+              <img class="slide-image" src="./static/photos-of-food/pasta-flora.jpg" alt="" />
+            </li>
+            <li class="splide__slide" caption="Paximatia">
+              <img class="slide-image" src="./static/photos-of-food/paximathia.jpg" alt="" />
+            </li>
+            <li class="splide__slide" caption="Sweet wine twists">
+              <img class="slide-image" src="./static/photos-of-food/sweet-wine-twists.jpg" alt="" />
+            </li>
+
+          </ul>
+        </div>
+
+      <div id="caption-holder">
+        <div id="caption-div">
+          Baklava
+        </div>
+      </div>
+
+      </section>
+
+
+      <ul id="thumbnails" class="thumbnails">
+        <li class="thumbnail">
+          <img src="./static/photos-of-food/baklava.jpg" alt="" />
+        </li>
+        <li class="thumbnail">
+          <img src="./static/photos-of-food/chocolate-paximathia.jpg" alt="" />
+        </li>
+        <li class="thumbnail">
+          <img src="./static/photos-of-food/date-cookie.jpg" alt="" />
+        </li>
+        <li class="thumbnail">
+          <img src="./static/photos-of-food/honey-dipped-cookies.jpg" alt="" />
+        </li>
+        <li class="thumbnail">
+          <img src="./static/photos-of-food/oatmeal-2.jpg" alt="" />
+        </li>
+        <li class="thumbnail">
+          <img src="./static/photos-of-food/pasta-flora.jpg" alt="" />
+        </li>
+        <li class="thumbnail">
+          <img src="./static/photos-of-food/paximathia.jpg" alt="" />
+        </li>
+        <li class="thumbnail">
+          <img src="./static/photos-of-food/sweet-wine-twists.jpg" alt="" />
+        </li>
+      </ul>
+
+    </div>
 
 
   </div>

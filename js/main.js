@@ -1,6 +1,6 @@
 
 
-import { zzz } from './utils';
+import { zzz } from './utils.js';
 
 
 
