@@ -900,6 +900,8 @@ p#caption {
     font-size: .9rem;
 }
 
-
+.center-this-text {
+    text-align: center;
+}
 
 
