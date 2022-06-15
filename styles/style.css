@@ -237,6 +237,10 @@ p#tagline {
     width: 40%;
 }
 
+#bee-path-svg-2 {
+    width: 500px;
+}
+
 /* ------------------------------------------- */
 
 
@@ -908,4 +912,7 @@ p#caption {
     text-align: center;
 }
 
-
+#prelude-thin-left {
+    display: flex;
+    flex-direction: column;
+}
