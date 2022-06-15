@@ -269,6 +269,10 @@ p#tagline {
     height: 300px;
 }
 
+.long-img-split {
+    flex-basis: 33%;
+}
+
 .split {
     flex-grow: 1;
 }
