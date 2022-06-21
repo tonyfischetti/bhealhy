@@ -4,3 +4,4 @@ package-lock.json
 dist/
 .well-known/
 docs/
+assets/fonts/
