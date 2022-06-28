@@ -843,27 +843,31 @@ img.big-image-thin {
 /* STORY THINGS */
 
 #story-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     background-color: var(--BlueGreen);
     color: white;
     padding: 10px;
     border-radius: 10px;
 }
 
-#story-photo-1 {
-    margin: 0px 30px 0px 0px;
-}
-
 #story-second {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     background-color: var(--Gold);
     color: var(--BlueGreen);
     padding: 10px;
     border-radius: 10px;
-
     margin-top: 20px;
-    height: 400px;
     font-weight: 700;
-    display: flex;
 }
+
+#story-photo-1 {
+    margin: 0px 30px 0px 0px;
+}
+
 
 #story-photo-2 {
     margin: 0px 0px 0px 30px;
@@ -877,9 +881,9 @@ img.big-image-thin {
     font-weight: 800;
 }
 
-.jcenter {
-    align-self: center;
-}
+/* .jcenter { */
+/*     align-self: center; */
+/* } */
 
 .info-card-split-2 {
     display: flex;
