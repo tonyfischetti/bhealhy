@@ -27,13 +27,13 @@ const $ = require("shelljs");
 
 const defaultTask = (cb) => {
   console.log(chalk.cyanBright("Hi from Gulp!"));
-  cb();
+  return cb();
 };
 
 const clean = (cb) => {
   $.rm('-rf', path.resolve(__dirname, 'dist'));
   $.rm('-rf', path.resolve(__dirname, 'docs'));
-  cb();
+  return cb();
 };
 
 const mrproper = (cb) => {
@@ -76,20 +76,6 @@ const moveAssets = (cb) => {
   .pipe(dest('dist/assets/'));
 };
 
-// const moveJS = (cb) => {
-//   return new Promise((resolve, reject) => {
-//     webpack(webpackConfig, (err, stats) => {
-//       if (err) {
-//         return reject(err);
-//       }
-//       if (stats.hasErrors()) {
-//         return reject(new Error(stats.compilation.errors.join('\n')));
-//       }
-//       resolve();
-//       })
-//   })
-// };
-
 const moveJS = (cb) => {
   return src('js/**/*.+(js)')
     .pipe(dest('dist/js/'));
@@ -107,11 +93,10 @@ const doc = (cb) => {
 
 const deploy = (cb) => {
   $.exec("rsync -Phav --delete dist/ polygram:~/3BHealthy.thepolygram.com");
-  cb();
+  return cb();
 };
 
 
-exports.default = defaultTask;
 exports.clean = clean;
 exports.mrproper = mrproper;
 exports.build = series(clean,
@@ -121,3 +106,4 @@ exports.moveJS = moveJS;
 exports.deploy = deploy;
 exports.doc = doc;
 
+exports.default = exports.build
