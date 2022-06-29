@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Your Order
+{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="styles/style.css">
+{% endblock %}
+
+
+{% block afternavbar %}
+  {% include "partials/logo-and-tagline-thin-2.html" %}
+{% endblock %}
+
+
+
+{% block middlebodycontainer %}
+
+<div id="middle-body-container">
+
+  <div class="narrower">
+
+    <p>Place your order directly by calling or texting <i>Vasi</i> of
+    3 B Healthy @ 973.888.9959</p>
+
+    <br/><br/>
+
+    <div id="pricing-table">
+      <div id="pricing-title">
+        <b>Pricing</b>
+      </div>
+      <table>
+        <tr>
+          <td>PLA compostable 32oz container</td>
+          <td>$15</td>
+        </tr>
+        <tr>
+          <td>Glass Jar 32oz *</td>
+          <td>$16</td>
+        </tr>
+        <tr>
+          <td>Glass Jar 16oz *</td>
+          <td>$8</td>
+        </tr>
+      </table>
+      <div id="pricing-asterisk">
+        * Items available in glass jars include: Vasi’s Vegan Paximadia,
+          Sweet Wine Twists, Double Chocolate Paximadia &amp; Oatmeal CC
+          Cookies only.
+      </div>
+    </div>
+
+    <br/><br/>
+
+    <div id="signup-holder">
+      {% include "partials/signup-form.html" %}
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}
+

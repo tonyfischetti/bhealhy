@@ -1129,3 +1129,65 @@ p#caption {
     display: flex;
     flex-direction: column;
 }
+
+
+#signup-holder {
+    width: 400px;
+}
+
+#mc_embed_signup .foot {
+    width: 90%;
+    align-items: center;
+}
+
+#mc_embed_signup {
+    border-radius: 10px;
+}
+
+td {
+    padding: 10px 20px;
+}
+
+#pricing-table {
+    max-width: 500px;
+    background: var(--Gold);
+    border-radius: 10px;
+    padding: 30px 20px;
+    font-size: 1.2rem;
+}
+
+#pricing-title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+table {
+    width: 100%;
+}
+
+#pricing-asterisk {
+    font-size: .7rem;
+    padding: 0px 30px;
+}
+
+#mc_embed_signup {
+    background: var(--BlueGreen) !important;
+    /* color: var(--Gold) !important; */
+    color: white !important;
+}
+
+#mc_embed_signup .button {
+    background-color: var(--Gold) !important;
+    color: black !important;
+}
+
+#mc_embed_signup .foot {
+    display: flex !important;
+}
+
+#mc_embed_signup_scroll h2 {
+    color: var(--Gold) !important;
+    text-align: center !important;
+}
