@@ -1191,3 +1191,7 @@ table {
     color: var(--Gold) !important;
     text-align: center !important;
 }
+
+.signup-form-text {
+    padding: 10px;
+}
