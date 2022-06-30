@@ -6,8 +6,13 @@
 
 {% block stylesheets %}
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/vendor/splide.min.css">
 {% endblock %}
 
+
+{% block additionaljs %}
+  <script src="js/order-carousel.js" type="module"></script>
+{% endblock %}
 
 {% block afternavbar %}
   {% include "partials/logo-and-tagline-thin-2.html" %}
@@ -21,41 +26,107 @@
 
   <div class="narrower">
 
-    <p>Place your order directly by calling or texting <i>Vasi</i> of
-    3 B Healthy @ 973.888.9959</p>
+    <div id="how-to-place-an-order">
+      Place your order directly by calling or texting <i>Vasi</i> of
+      3 B Healthy @ 973.888.9959
+    </div>
 
-    <br/><br/>
+    <div id="holder-of-order-carousel">
+      <section id="main-slider" class="splide" aria-label="My Awesome Gallery">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img class="slide-image" src="./static/container-photos/1.jpg" alt="" />
+            </li>
+            <li class="splide__slide">
+              <img class="slide-image" src="./static/container-photos/2.jpg" alt="" />
+            </li>
+            <li class="splide__slide">
+              <img class="slide-image" src="./static/container-photos/2.jpg" alt="" />
+            </li>
+            <li class="splide__slide">
+              <img class="slide-image" src="./static/container-photos/4.jpg" alt="" />
+            </li>
+          </ul>
+        </div>
+      </section>
 
-    <div id="pricing-table">
-      <div id="pricing-title">
-        <b>Pricing</b>
+      <ul id="thumbnails" class="thumbnails">
+        <li class="thumbnail">
+          <img src="./static/container-photos/1.jpg" alt="" />
+        </li>
+        <li class="thumbnail">
+          <img src="./static/container-photos/2.jpg" alt="" />
+        </li>
+        <li class="thumbnail">
+          <img src="./static/container-photos/3.jpg" alt="" />
+        </li>
+        <li class="thumbnail">
+          <img src="./static/container-photos/4.jpg" alt="" />
+        </li>
+      </ul>
+    </div>
+
+    <div id="main-order-holder">
+      <div id="order-left">
+        <div id="pricing-table">
+          <div id="pricing-title">
+            <b>Pricing</b>
+          </div>
+          <table>
+            <tr>
+              <td>PLA compostable 32oz container</td>
+              <td>$15</td>
+            </tr>
+            <tr>
+              <td>Glass Jar 32oz *</td>
+              <td>$16</td>
+            </tr>
+            <tr>
+              <td>Glass Jar 16oz *</td>
+              <td>$8</td>
+            </tr>
+          </table>
+          <div id="pricing-asterisk">
+            * Items available in glass jars include: Vasi’s Vegan Paximadia,
+              Sweet Wine Twists, Double Chocolate Paximadia &amp; Oatmeal CC
+              Cookies only.
+          </div>
+        </div>
+
+        <div id="payments-table">
+          <div id="payments-title">
+            <b>Accepted Payments</b>
+          </div>
+          <table>
+            <tr>
+              <td>Cash</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Zelle</td>
+              <td>3BHealthy3@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Venmo</td>
+              <td>ThreeBHealthy</td>
+            </tr>
+          </table>
+          <div id="payments-asterisk">
+            Credit card only at Farmer’s Market &amp; in person pickup
+          </div>
+        </div>
       </div>
-      <table>
-        <tr>
-          <td>PLA compostable 32oz container</td>
-          <td>$15</td>
-        </tr>
-        <tr>
-          <td>Glass Jar 32oz *</td>
-          <td>$16</td>
-        </tr>
-        <tr>
-          <td>Glass Jar 16oz *</td>
-          <td>$8</td>
-        </tr>
-      </table>
-      <div id="pricing-asterisk">
-        * Items available in glass jars include: Vasi’s Vegan Paximadia,
-          Sweet Wine Twists, Double Chocolate Paximadia &amp; Oatmeal CC
-          Cookies only.
+
+      <div id="order-right">
+        <div id="signup-holder">
+          {% include "partials/signup-form.html" %}
+        </div>
       </div>
     </div>
 
-    <br/><br/>
 
-    <div id="signup-holder">
-      {% include "partials/signup-form.html" %}
-    </div>
+
 
   </div>
 
