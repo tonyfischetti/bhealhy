@@ -1169,7 +1169,7 @@ table {
 
 
 #pricing-table {
-    max-width: 500px;
+    /* max-width: 500px; */
     background: var(--Gold);
     border-radius: 10px;
     padding: 30px 20px;
@@ -1218,7 +1218,7 @@ table {
 
 
 #payments-table {
-    max-width: 500px;
+    /* max-width: 500px; */
     background: var(--Gold);
     border-radius: 10px;
     padding: 30px 20px;
@@ -1243,12 +1243,26 @@ table {
     padding: 10px 30px;
     font-size: 1.5rem;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 #main-order-holder {
     display: flex;
     flex-direction: row;
     gap: 20px;
+}
+
+#order-right {
+}
+
+/* when smaller screens... */
+@media only screen and (max-width: 780px) {
+    #main-order-holder {
+        flex-direction: column;
+    }
+    #order-right {
+        align-self: center;
+    }
 }
 
 #order-left {
