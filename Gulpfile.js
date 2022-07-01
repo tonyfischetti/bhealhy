@@ -92,7 +92,7 @@ const doc = (cb) => {
 // TODO: have two modes (including one that minifies)
 
 const deploy = (cb) => {
-  $.exec("rsync -Phav --delete dist/ polygram:~/3BHealthy.thepolygram.com");
+  $.exec("rsync -Phav --delete dist/ 3bhealthy:~/www");
   return cb();
 };
 

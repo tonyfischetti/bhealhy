@@ -353,6 +353,24 @@ a.nav-link:hover {
     align-items: center;
 }
 
+#veggie-burger {
+    /* display: none; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--BlueGreen);
+    font-size: 2rem;
+    padding-right: 10px;
+}
+
+#responsive-navbar {
+    display: none;
+}
+
+.hide-when-big {
+    display: none;
+}
+
 /* when smaller screens... */
 @media only screen and (max-width: 780px) {
   #main-navbar {
@@ -362,8 +380,23 @@ a.nav-link:hover {
   a.nav-link {
     text-decoration: underline;
   }
+  #veggie-burger {
+      display: flex;
+  }
+  .hide-when-small {
+      display: none;
+  }
+    .hide-when-big {
+        display: flex;
+    }
 }
 
+/* when smaller screens... */
+@media only screen and (min-width: 781px) {
+    .hide-when-big {
+        display: none;
+    }
+}
 
 /* ------------------------------------------- */
 
@@ -826,6 +859,11 @@ footer {
     border-radius: 10px;
 }
 
+.people-picture-2 {
+    max-height: 100%;
+    border-radius: 10px;
+}
+
 .no-mobile-picture {
 }
 
@@ -1274,6 +1312,14 @@ table {
 #mc_embed_signup_scroll h2 {
     color: var(--Gold) !important;
     text-align: center !important;
+}
+
+#mce-success-response {
+    color: white;
+}
+
+#mce-responses {
+    color: white;
 }
 
 .signup-form-text {
