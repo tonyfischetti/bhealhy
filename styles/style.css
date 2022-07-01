@@ -445,6 +445,10 @@ p#tagline {
     }
 }
 
+#bee-path-svg-home {
+    width: 40%;
+}
+
 #bee-path-svg-2 {
     width: 500px;
 }
