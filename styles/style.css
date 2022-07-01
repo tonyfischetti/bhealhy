@@ -860,27 +860,33 @@ img.big-image-thin {
 
 /* STORY THINGS */
 
-#story-main {
+#story-main, #story-second {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: var(--BlueGreen);
-    color: white;
     padding: 10px;
     border-radius: 10px;
 }
 
+#story-main {
+    background-color: var(--BlueGreen);
+    color: white;
+}
+
 #story-second {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     background-color: var(--Gold);
     color: var(--BlueGreen);
-    padding: 10px;
-    border-radius: 10px;
     margin-top: 20px;
     font-weight: 700;
 }
+
+/* when smaller screens... */
+@media only screen and (max-width: 780px) {
+    #story-main, #story-second {
+        flex-direction: column;
+    }
+}
+
 
 .story-text {
     padding: 0px 20px;
@@ -916,13 +922,27 @@ img.big-image-thin {
     justify-content: space-evenly;
 }
 
+#explainer {
+    font-size: 0.8em;
+}
+
+/* when smaller screens... */
+@media only screen and (max-width: 780px) {
+    .info-card-split-2 {
+        flex-direction: column;
+    }
+    #explainer {
+        align-self: center;
+    }
+    #story-photo-1, #story-photo-2 {
+        margin: 0 10px 0 10px;
+    }
+}
+
 #nj-info {
     font-style: italic;
 }
 
-#explainer {
-    font-size: 0.8em;
-}
 
 /* ------------------------------------------- */
 
