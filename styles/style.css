@@ -422,7 +422,7 @@ a.nav-link:hover {
 
 img.big-image {
     width: calc(var(--AbsoluteMaxWidth) * 0.4);
-    max-width: 95%;
+    /* max-width: 95%; */
 }
 
 p#tagline {
@@ -438,12 +438,25 @@ p#tagline {
     margin-top: 10px;
 }
 
-#bee-path-svg {
-    width: 40%;
+/* when smaller screens... */
+@media only screen and (max-width: 780px) {
+    #bee-path-container {
+        display: none;
+    }
 }
 
 #bee-path-svg-2 {
     width: 500px;
+}
+
+/* when smaller screens... */
+@media only screen and (max-width: 780px) {
+    #circle-logo-in-thin {
+        display: none;
+    }
+    #bee-path-svg-2 {
+        width: 100%;
+    }
 }
 
 /* ------------------------------------------- */
@@ -458,6 +471,7 @@ p#tagline {
     flex-direction: row;
     gap: 1em;
     margin-block: 2rem;
+    align-items: center;
 }
 
 /* when smaller screens... */
@@ -799,7 +813,7 @@ a.dark-link:visited {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 200px;
+    /* height: 90px; */
     margin: 40px 0px 0px 0px;
     /* width: 95%; */
 }
@@ -814,7 +828,7 @@ a.dark-link:visited {
     border-radius: 11px;
     border-style: none solid;
     padding: 10px;
-    gap: 200px;
+    gap: 90px;
 }
 
 img.big-image-thin {
@@ -1055,8 +1069,13 @@ p#caption {
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
-    /* width: 700px; */
-    /* wid */
+}
+
+/* when smaller screens... */
+@media only screen and (max-width: 780px) {
+    #holder-of-carousel {
+        display: none;
+    }
 }
 
 .splide {
