@@ -420,9 +420,29 @@ a.nav-link:hover {
     margin-bottom: 2rem;
 }
 
+/* !!!!!!!!!!! */
+/* when smaller screens... */
+@media only screen and (max-width: 780px) {
+    #info-card-img-split, #info-card-img-split-i2 {
+        display: none;
+    }
+}
+
+#circle-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 img.big-image {
     width: calc(var(--AbsoluteMaxWidth) * 0.4);
     /* max-width: 95%; */
+}
+
+@media only screen and (max-width: 780px) {
+    img.big-image {
+        width: calc(var(--AbsoluteMaxWidth) * 0.3);
+    }
 }
 
 p#tagline {
@@ -470,7 +490,7 @@ p#tagline {
 
     /* AN INFO CARD / PHOTO ELEMENT */
 
-#info-card-img-split {
+#info-card-img-split, #info-card-img-split-i2 {
     display: flex;
     flex-direction: row;
     gap: 1em;
@@ -478,15 +498,31 @@ p#tagline {
     align-items: center;
 }
 
+#photo-of-cutting-something {
+    width: 100%;
+}
+
 /* when smaller screens... */
 @media only screen and (max-width: 780px) {
-    #info-card-img-split {
+    #info-card-img-split, #info-card-img-split-i2 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
     .info-card-content {
         padding: 2em;
+    }
+}
+
+/* !!!!!!!!!! */
+/* when smaller screens... */
+@media only screen and (max-width: 780px) {
+    /* #info-card-img-split, #info-card-img-split-i2 { */
+    /* #info-card-img-split-i2 { */
+    /* #info-card-img-split-i2 { */
+    #photo-of-cutting-something {
+        /* display: none; */
+        /* width: 60%; */
     }
 }
 
@@ -532,6 +568,10 @@ p#tagline {
     padding-inline: 2em;
     max-width: 70ch;
     flex-grow: 1;
+}
+
+#flower-of-life {
+    padding: 20px 0px;
 }
 
 li {
@@ -782,7 +822,7 @@ footer {
 }
 
 .people-picture {
-    max-height: 100%;
+    /* max-height: 100%; */
     border-radius: 10px;
 }
 
